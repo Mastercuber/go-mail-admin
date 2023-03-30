@@ -1,7 +1,7 @@
 client-build:
 	rm -f -r  ./mailserver-configurator-client/dist/
-	cd ./mailserver-configurator-client; npm install
-	cd ./mailserver-configurator-client; npm run build
+	cd ./mailserver-configurator-client; /home/armin/.asdf/shims/npm install
+	cd ./mailserver-configurator-client; /home/armin/.asdf/shims/npm run build
 
 interface-copy-client:
 	rm -r ./mailserver-configurator-interface/public/*
@@ -23,8 +23,8 @@ run:
 gorelease-vue:
 	go get github.com/rakyll/statik
 	rm -f -r  ./mailserver-configurator-client/dist/
-	cd ./mailserver-configurator-client; npm install
-	cd ./mailserver-configurator-client; npm run build
+	cd ./mailserver-configurator-client; /home/armin/.asdf/shims/npm install
+	cd ./mailserver-configurator-client; /home/armin/.asdf/shims/npm run build
 	mkdir ./mailserver-configurator-interface/public/
 	cp -r ./mailserver-configurator-client/dist/* ./mailserver-configurator-interface/public/
 	cd ./mailserver-configurator-interface; ~/go/bin/statik -f -src=./public

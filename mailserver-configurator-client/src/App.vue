@@ -1,27 +1,18 @@
 <template>
-
   <v-app>
     <Topbar></Topbar>
     <v-content>
-
-        <router-view/>
-
-
+      <router-view/>
     </v-content>
-
   </v-app>
 </template>
 <script>
-  import Topbar from "./components/Topbar";
+  import Topbar from "./components/Topbar.vue";
 
   export default {
     name: 'App',
     components: {
       'Topbar': Topbar
-    },
-    
-    methods: {
-
     },
 
     data: () => ({
